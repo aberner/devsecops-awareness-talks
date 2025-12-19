@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DevSecOps Awareness Talks - A collection of presentations about security in modern software development">
+    <title>DevSecOps Awareness Talks</title>
+    
+    <!-- Reveal.js CSS -->
+    <link rel="stylesheet" href="node_modules/reveal.js/dist/reset.css">
+    <link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="node_modules/reveal.js/dist/theme/black.css">
+    
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="node_modules/reveal.js/plugin/highlight/monokai.css">
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <!-- Title Slide -->
+            <section>
+                <h1>DevSecOps</h1>
+                <h3>Security in Modern Software Development</h3>
+                <p>
+                    <small>Awareness Talks</small>
+                </p>
+            </section>
+
+            <!-- What is DevSecOps -->
+            <section>
+                <h2>What is DevSecOps?</h2>
+                <p>DevSecOps integrates security practices within the DevOps process.</p>
+                <ul>
+                    <li>Security as Code</li>
+                    <li>Continuous Security</li>
+                    <li>Shift-Left Security</li>
+                    <li>Automated Security Testing</li>
+                </ul>
+            </section>
+
+            <!-- Why DevSecOps Matters -->
+            <section>
+                <h2>Why DevSecOps Matters</h2>
+                <ul>
+                    <li>🔒 Proactive security approach</li>
+                    <li>⚡ Faster vulnerability detection</li>
+                    <li>💰 Reduced cost of security fixes</li>
+                    <li>🤝 Shared security responsibility</li>
+                </ul>
+            </section>
+
+            <!-- Key Practices -->
+            <section>
+                <h2>Key Practices</h2>
+                <ol>
+                    <li>Security scanning in CI/CD pipelines</li>
+                    <li>Infrastructure as Code security</li>
+                    <li>Container and dependency scanning</li>
+                    <li>Secret management</li>
+                    <li>Security monitoring and logging</li>
+                </ol>
+            </section>
+
+            <!-- Security Tools -->
+            <section>
+                <h2>Common Security Tools</h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div>
+                        <h4>SAST</h4>
+                        <p>Static Application Security Testing</p>
+                    </div>
+                    <div>
+                        <h4>DAST</h4>
+                        <p>Dynamic Application Security Testing</p>
+                    </div>
+                    <div>
+                        <h4>SCA</h4>
+                        <p>Software Composition Analysis</p>
+                    </div>
+                    <div>
+                        <h4>IAST</h4>
+                        <p>Interactive Application Security Testing</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Best Practices -->
+            <section>
+                <h2>Best Practices</h2>
+                <ul>
+                    <li>✅ Automate security testing</li>
+                    <li>✅ Use security gates in pipelines</li>
+                    <li>✅ Regular dependency updates</li>
+                    <li>✅ Implement least privilege access</li>
+                    <li>✅ Security training for all team members</li>
+                </ul>
+            </section>
+
+            <!-- Code Example -->
+            <section>
+                <h2>Security in CI/CD Pipeline</h2>
+                <pre><code data-trim data-noescape>
+# Example GitHub Actions workflow
+name: Security Scan
+on: [push, pull_request]
+
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run security scan
+        run: |
+          npm audit
+          npm run test:security
+      - name: Upload results
+        uses: github/codeql-action/upload-sarif@v3
+                </code></pre>
+            </section>
+
+            <!-- Final Slide -->
+            <section>
+                <h2>Get Started Today!</h2>
+                <p>Security is everyone's responsibility</p>
+                <p>
+                    <small>
+                        Learn more at 
+                        <a href="https://github.com/aberner/devsecops-awareness-talks">
+                            github.com/aberner/devsecops-awareness-talks
+                        </a>
+                    </small>
+                </p>
+            </section>
+        </div>
+    </div>
+
+    <!-- Reveal.js JavaScript -->
+    <script src="node_modules/reveal.js/dist/reveal.js"></script>
+    <script src="node_modules/reveal.js/plugin/notes/notes.js"></script>
+    <script src="node_modules/reveal.js/plugin/markdown/markdown.js"></script>
+    <script src="node_modules/reveal.js/plugin/highlight/highlight.js"></script>
+    
+    <script>
+        // Initialize reveal.js
+        Reveal.initialize({
+            hash: true,
+            controls: true,
+            progress: true,
+            center: true,
+            transition: 'slide',
+            plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+        });
+    </script>
+</body>
+</html>

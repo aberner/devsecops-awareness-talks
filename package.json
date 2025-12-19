@@ -1,0 +1,16 @@
+{
+  "name": "devsecops-awareness-talks",
+  "version": "1.0.0",
+  "description": "DevSecOps Awareness Talks is a collection of presentations designed to raise awareness about security in modern software development and delivery processes.",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "reveal.js": "^5.2.1"
+  }
+}
