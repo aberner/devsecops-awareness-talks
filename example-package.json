@@ -1,0 +1,27 @@
+{
+  "name": "typical-web-application",
+  "version": "1.0.0",
+  "description": "A typical web application with common dependencies",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "jest"
+  },
+  "dependencies": {
+    "react": "^18",
+    "react-dom": "^18",
+    "react-router-dom": "^6.8.0",
+    "axios": "^1",
+    "lodash": "^4",
+    "moment": "^2.29.4",
+    "express": "^4",
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "react-scripts": "^5.0.1",
+    "jest": "^29.4.0",
+    "@testing-library/react": "^13.4.0",
+    "eslint": "^8.34.0",
+    "prettier": "^2.8.4"
+  }
+}

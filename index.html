@@ -5,151 +5,164 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="DevSecOps Awareness Talks - A collection of presentations about security in modern software development">
     <title>DevSecOps Awareness Talks</title>
-    
-    <!-- Reveal.js CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/reset.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/reveal.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/theme/black.css">
-    
-    <!-- Theme used for syntax highlighted code -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/plugin/highlight/monokai.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a2e 100%);
+            color: #e0e0e0;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 40px 20px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 20px;
+            border: 1px solid rgba(66, 175, 250, 0.2);
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #42affa 0%, #d4a574 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .subtitle {
+            font-size: 1.3em;
+            color: #888;
+            margin-top: 10px;
+        }
+        .talks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .talk-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid rgba(66, 175, 250, 0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .talk-card:hover {
+            transform: translateY(-5px);
+            border-color: #42affa;
+            box-shadow: 0 10px 40px rgba(66, 175, 250, 0.2);
+        }
+        .talk-number {
+            display: inline-block;
+            background: #42affa;
+            color: #000;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+        .talk-title {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+        .talk-description {
+            color: #aaa;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .talk-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #42affa 0%, #3a9fd9 100%);
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .talk-link:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 20px rgba(66, 175, 250, 0.4);
+        }
+        .coming-soon {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        .coming-soon-badge {
+            display: inline-block;
+            background: #666;
+            color: #ccc;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            margin-left: 10px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #666;
+        }
+    </style>
 </head>
 <body>
-    <div class="reveal">
-        <div class="slides">
-            <!-- Title Slide -->
-            <section>
-                <h1>DevSecOps</h1>
-                <h3>Security in Modern Software Development</h3>
-                <p>
-                    <small>Awareness Talks</small>
+    <div class="container">
+        <header>
+            <h1>DevSecOps Awareness Talks</h1>
+            <p class="subtitle">A collection of presentations about security in modern software development</p>
+        </header>
+
+        <div class="talks-grid">
+            <!-- Part 1 -->
+            <div class="talk-card" onclick="window.location.href='part1-intro.html'">
+                <span class="talk-number">Part 1</span>
+                <h2 class="talk-title">Why Security in Development and Delivery Matters for Everyone</h2>
+                <p class="talk-description">
+                    Explore how the battleground has shifted from production systems to the development process itself. 
+                    Learn about supply chain attacks, the Shai-Hulud npm attack, and why security is everyone's responsibility.
                 </p>
-            </section>
+                <a href="part1-intro.html" class="talk-link">View Presentation →</a>
+            </div>
 
-            <!-- What is DevSecOps -->
-            <section>
-                <h2>What is DevSecOps?</h2>
-                <p>DevSecOps integrates security practices within the DevOps process.</p>
-                <ul>
-                    <li>Security as Code</li>
-                    <li>Continuous Security</li>
-                    <li>Shift-Left Security</li>
-                    <li>Automated Security Testing</li>
-                </ul>
-            </section>
-
-            <!-- Why DevSecOps Matters -->
-            <section>
-                <h2>Why DevSecOps Matters</h2>
-                <ul>
-                    <li>🔒 Proactive security approach</li>
-                    <li>⚡ Faster vulnerability detection</li>
-                    <li>💰 Reduced cost of security fixes</li>
-                    <li>🤝 Shared security responsibility</li>
-                </ul>
-            </section>
-
-            <!-- Key Practices -->
-            <section>
-                <h2>Key Practices</h2>
-                <ol>
-                    <li>Security scanning in CI/CD pipelines</li>
-                    <li>Infrastructure as Code security</li>
-                    <li>Container and dependency scanning</li>
-                    <li>Secret management</li>
-                    <li>Security monitoring and logging</li>
-                </ol>
-            </section>
-
-            <!-- Security Tools -->
-            <section>
-                <h2>Common Security Tools</h2>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                    <div>
-                        <h4>SAST</h4>
-                        <p>Static Application Security Testing</p>
-                    </div>
-                    <div>
-                        <h4>DAST</h4>
-                        <p>Dynamic Application Security Testing</p>
-                    </div>
-                    <div>
-                        <h4>SCA</h4>
-                        <p>Software Composition Analysis</p>
-                    </div>
-                    <div>
-                        <h4>IAST</h4>
-                        <p>Interactive Application Security Testing</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Best Practices -->
-            <section>
-                <h2>Best Practices</h2>
-                <ul>
-                    <li>✅ Automate security testing</li>
-                    <li>✅ Use security gates in pipelines</li>
-                    <li>✅ Regular dependency updates</li>
-                    <li>✅ Implement least privilege access</li>
-                    <li>✅ Security training for all team members</li>
-                </ul>
-            </section>
-
-            <!-- Code Example -->
-            <section>
-                <h2>Security in CI/CD Pipeline</h2>
-                <pre><code data-trim data-noescape>
-# Example GitHub Actions workflow
-name: Security Scan
-on: [push, pull_request]
-
-jobs:
-  security:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Run security scan
-        run: |
-          npm audit
-          npm run test:security
-      - name: Upload results
-        uses: github/codeql-action/upload-sarif@v3
-                </code></pre>
-            </section>
-
-            <!-- Final Slide -->
-            <section>
-                <h2>Get Started Today!</h2>
-                <p>Security is everyone's responsibility</p>
-                <p>
-                    <small>
-                        Learn more at 
-                        <a href="https://github.com/aberner/devsecops-awareness-talks">
-                            github.com/aberner/devsecops-awareness-talks
-                        </a>
-                    </small>
+            <!-- Part 2 - Coming Soon -->
+            <div class="talk-card coming-soon">
+                <span class="talk-number">Part 2</span>
+                <span class="coming-soon-badge">Coming Soon</span>
+                <h2 class="talk-title">How Attacks Work & Protecting Your Pipelines</h2>
+                <p class="talk-description">
+                    Dive deep into attack mechanisms, understand how vulnerabilities are exploited, 
+                    and learn practical steps to secure your CI/CD pipelines and dependencies.
                 </p>
-            </section>
+            </div>
+
+            <!-- Part 3 - Coming Soon -->
+            <div class="talk-card coming-soon">
+                <span class="talk-number">Part 3</span>
+                <span class="coming-soon-badge">Coming Soon</span>
+                <h2 class="talk-title">Building a Security Culture</h2>
+                <p class="talk-description">
+                    Implement DevSecOps practices in your organization, foster security awareness, 
+                    and create a culture where security is integrated into every step of development.
+                </p>
+            </div>
         </div>
-    </div>
 
-    <!-- Reveal.js JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/reveal.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/plugin/notes/notes.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/plugin/markdown/markdown.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/plugin/highlight/highlight.js"></script>
-    
-    <script>
-        // Initialize reveal.js
-        Reveal.initialize({
-            hash: true,
-            controls: true,
-            progress: true,
-            center: true,
-            transition: 'slide',
-            plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-        });
-    </script>
+        <footer>
+            <p>&copy; 2025 DevSecOps Awareness Talks</p>
+        </footer>
+    </div>
 </body>
 </html>
