@@ -1,4 +1,5 @@
 [![pages-build-deployment](https://github.com/aberner/devsecops-awareness-talks/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/aberner/devsecops-awareness-talks/actions/workflows/pages/pages-build-deployment)
+[![Dependabot Updates](https://github.com/aberner/devsecops-awareness-talks/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/aberner/devsecops-awareness-talks/actions/workflows/dependabot/dependabot-updates)
 
 # devsecops-awareness-talks
 DevSecOps Awareness Talks is a collection of presentations designed to raise awareness about security in modern software development and delivery processes.
