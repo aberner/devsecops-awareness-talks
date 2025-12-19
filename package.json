@@ -4,13 +4,15 @@
   "description": "DevSecOps Awareness Talks is a collection of presentations designed to raise awareness about security in modern software development and delivery processes.",
   "main": "index.html",
   "scripts": {
-    "start": "python3 -m http.server 8000",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npx http-server -p 8000"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "reveal.js": "^5.2.1"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
   }
 }
