@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A beginner-friendly introduction to Git, GitHub, Visual Studio Code, and delivering changes to Azure.">
+    <title>Working with GitHub in Visual Studio Code</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/theme/black.css">
+    <style>
+        .reveal { font-size: 32px; }
+        .reveal h1 { font-size: 2em; }
+        .reveal h2 { font-size: 1.5em; }
+        .reveal li { margin-bottom: 0.4em; }
+        .reveal .small { font-size: 0.75em; }
+        .reveal .cue { color: #d4a574; margin-top: 1em; }
+        .reveal .flow { color: #42affa; margin: 1em 0; }
+        .reveal .customize { border-left: 4px solid #d4a574; padding: 0.5em; text-align: left; }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Working with GitHub<br>in Visual Studio Code</h1>
+                <p>From a small change on your laptop to a running app in Azure</p>
+                <p class="cue">No Git or Azure experience needed</p>
+                <aside class="notes">
+                    0–2 minutes. Ask who has used VS Code, Git, or Azure. This is a guided demonstration,
+                    not an installation workshop. Participants can watch; no command-line knowledge is required.
+                    Before presenting, replace the company prompts on slides 7 and 9 with approved details.
+                    Use only a demo repository and non-production Azure resources.
+                </aside>
+            </section>
+
+            <section>
+                <h2>Today we will cover</h2>
+                <ul>
+                    <li>The basic Git and GitHub concepts</li>
+                    <li>The everyday VS Code workflow</li>
+                    <li>How we work in our company</li>
+                    <li>How code reaches Azure</li>
+                    <li>A complete practical example</li>
+                </ul>
+                <p class="small">20 min introduction · 30 min live demo · 10 min questions</p>
+                <aside class="notes">
+                    2–3 minutes. Keep slides 1–9 within 20 minutes total. Reserve minutes 20–50 for
+                    the tools and the complete example, then minutes 50–60 for recap and questions.
+                    Explain that the objective is to recognize the steps, not memorize every button.
+                </aside>
+            </section>
+
+            <section>
+                <h2>Four tools, four different jobs</h2>
+                <ul>
+                    <li><strong>VS Code:</strong> where we edit and inspect files</li>
+                    <li><strong>Git:</strong> records change history on our computer</li>
+                    <li><strong>GitHub:</strong> hosts shared repositories and reviews</li>
+                    <li><strong>Azure:</strong> runs our apps and cloud resources</li>
+                </ul>
+                <p class="flow">Edit locally → collaborate on GitHub → run in Azure</p>
+                <aside class="notes">
+                    3–6 minutes. Git works without GitHub or an internet connection.
+                    GitHub is not Azure, and saving a file in VS Code does not update a running app.
+                    Azure is Microsoft's cloud platform. Azure DevOps is a separate collaboration
+                    and pipeline product; use the actual company delivery tool when demonstrating.
+                </aside>
+            </section>
+
+            <section>
+                <h2>Git: a shared project with a memory</h2>
+                <ul>
+                    <li><strong>Repository (repo):</strong> project files plus their history</li>
+                    <li><strong>Clone:</strong> make a local copy of a repository</li>
+                    <li><strong>Branch:</strong> a separate line of work</li>
+                    <li><strong>Commit:</strong> a recorded snapshot with a message</li>
+                </ul>
+                <p class="small">Think: shared project folder + checkpoints + parallel work</p>
+                <aside class="notes">
+                    6–9 minutes. A branch lets us work without immediately changing the shared
+                    main branch. Show one small change and its commit message rather than a complex
+                    branching diagram. A commit records the staged changes, not automatically every file.
+                </aside>
+            </section>
+
+            <section>
+                <h2>Local is not the same as shared</h2>
+                <p class="flow">Save → Stage → Commit → Push</p>
+                <ul>
+                    <li><strong>Save:</strong> update the file on your computer</li>
+                    <li><strong>Stage:</strong> choose changes for the next commit</li>
+                    <li><strong>Commit:</strong> record those changes locally</li>
+                    <li><strong>Push:</strong> send local commits to GitHub</li>
+                    <li><strong>Pull:</strong> bring remote changes into your branch</li>
+                </ul>
+                <aside class="notes">
+                    9–12 minutes. Ask: “If I commit but do not push, can my colleague see it on GitHub?”
+                    Answer: no. Fetch checks for remote updates without integrating them; pull integrates
+                    them. VS Code Sync can pull and push, so demonstrate the separate actions first.
+                    If a conflict appears, do not blindly accept a version: inspect both changes,
+                    agree the intended result with the author, test, then commit the resolution.
+                </aside>
+            </section>
+
+            <section>
+                <h2>The everyday VS Code workflow</h2>
+                <ol>
+                    <li>Clone the approved repo and open its folder</li>
+                    <li>Start from an up-to-date base; create a work branch</li>
+                    <li>Edit, save, and check the result locally</li>
+                    <li>Review the diff; stage and commit your change</li>
+                    <li>Publish the branch / push, then open a pull request</li>
+                </ol>
+                <p class="cue">Explorer = files · Source Control = changes · status bar = branch</p>
+                <aside class="notes">
+                    12–15 minutes. Briefly point out Explorer, editor, Source Control, and the branch
+                    indicator; leave the actual clicks for the demo. Git must be installed as well as
+                    VS Code. Use Git: Clone from the Command Palette and company-approved sign-in.
+                    Open only trusted repositories; review Workspace Trust prompts before trusting.
+                    Check for uncommitted work before switching branches or pulling.
+                    Run the repository's documented checks. A diff is the before/after comparison.
+                    Git operations are built in; the GitHub Pull Requests extension is optional,
+                    and the browser is sufficient for opening and reviewing a pull request.
+                </aside>
+            </section>
+
+            <section>
+                <h2>How we work in our company</h2>
+                <p class="small customize">Presenter: replace these prompts with our confirmed rules.</p>
+                <ul>
+                    <li><strong>Access:</strong> [organization, sign-in, repo access contact]</li>
+                    <li><strong>Branches:</strong> [base branch and naming rule]</li>
+                    <li><strong>Review:</strong> [reviewers, required checks, merge permissions]</li>
+                    <li><strong>Release:</strong> [deployment approvals and support owner]</li>
+                </ul>
+                <p class="cue">Never commit passwords, tokens, or customer data.</p>
+                <aside class="notes">
+                    15–17 minutes. These are prompts, not claims about company policy.
+                    Confirm approved authentication, MFA/SSO requirements, branch protections,
+                    required checks, who can merge, and where colleagues request help.
+                    Explain that a pull request (PR) asks others to review a proposed change;
+                    merge incorporates it into the target branch. Show the real rules in the demo.
+                    Keep secrets in company-approved secret storage, not source files or PR comments.
+                    If a secret is exposed, stop, report it, and have it revoked/rotated;
+                    deleting the current file does not remove it from Git history.
+                </aside>
+            </section>
+
+            <section>
+                <h2>How code reaches Azure</h2>
+                <p class="flow">Branch → Pull request → Checks &amp; review → Merge<br>
+                    → Build → Deploy → Verify</p>
+                <ul>
+                    <li><strong>Pipeline:</strong> automated steps that check and deliver code</li>
+                    <li><strong>Build:</strong> prepare the version that will run</li>
+                    <li><strong>Deploy:</strong> release that version to an environment</li>
+                </ul>
+                <p class="small">GitHub stores code; Azure runs the deployed version.<br>
+                    A push or merge only deploys if a configured pipeline triggers it.</p>
+                <aside class="notes">
+                    17–19 minutes. This is a simplified example, not a guarantee of our release sequence.
+                    Use our actual pipeline, whether GitHub Actions, Azure DevOps, or another approved
+                    tool. Explain checks as an automated safety net and approvals as a human decision.
+                    Production may require a separate release. Pipeline authentication uses an approved
+                    identity with limited permissions; never display credentials during the demo.
+                </aside>
+            </section>
+
+            <section>
+                <h2>Our Azure destination</h2>
+                <p class="small customize">Presenter: fill in the approved demo resources and release path.</p>
+                <ul>
+                    <li><strong>Subscription:</strong> [our demo resource/account boundary]</li>
+                    <li><strong>Resource group:</strong> [the demo's related resources]</li>
+                    <li><strong>App resource:</strong> [service, name, and test URL]</li>
+                    <li><strong>Delivery:</strong> [pipeline, trigger, environment, approval]</li>
+                </ul>
+                <p class="cue">Today: non-production only. Production follows our release rules.</p>
+                <aside class="notes">
+                    19–20 minutes. A subscription groups Azure resources for billing and management;
+                    a resource group organizes related resources. An environment is a deployment
+                    destination such as test or production. Do not imply a particular Azure service
+                    is used until confirmed. Identify the correct tenant/directory as well as
+                    subscription before the demo. Show only approved resource information.
+                </aside>
+            </section>
+
+            <section>
+                <h2>Live demo: one small, visible change</h2>
+                <p>Example: change the welcome heading in an existing demo web app.</p>
+                <ol>
+                    <li><strong>VS Code:</strong> clone, branch, edit, preview, diff, commit, push</li>
+                    <li><strong>GitHub:</strong> open PR, inspect checks, review, merge</li>
+                    <li><strong>Pipeline &amp; Azure:</strong> follow deployment and verify the app</li>
+                </ol>
+                <p class="cue">Success = the reviewed change is visible at the test URL.</p>
+                <aside class="notes">
+                    20–50 minutes. Use an existing approved sample app already connected to a
+                    working non-production deployment pipeline, not this presentation site's GitHub
+                    Pages deployment. No new infrastructure setup during the meeting.
+                    20–30: show the repo URL, clone/open it in VS Code, pull the clean base branch,
+                    create a branch following our naming rule, and change only the welcome heading.
+                    Save and run the app's documented preview/checks. Inspect the diff, stage only
+                    the intended file, commit with a descriptive message, and publish/push.
+                    30–40: open GitHub, create a PR targeting the approved base, describe the change
+                    and verification, show Files changed and check results, and request review.
+                    Have an authorized colleague ready to review. Address feedback, wait for required
+                    checks, then let an authorized person merge; never bypass protections for the demo.
+                    40–50: follow the configured pipeline trigger or approved manual release,
+                    show the run for the merged revision and any environment approval, and open the
+                    Azure resource and test URL. Confirm the deployed revision and visible heading.
+                    If checks fail, inspect the failing step and fix via the same branch/PR workflow.
+                    If deployment fails, stop promotion and use the documented recovery process.
+                    If a run is slow or access fails, use a previously completed approved demo
+                    PR/run and sanitized screenshots, clearly labeled as a recorded example.
+                    Do not pretend a queued or failed run is a successful deployment.
+                </aside>
+            </section>
+
+            <section>
+                <h2>The workflow to remember</h2>
+                <p class="flow">Get latest → Branch → Edit → Check → Commit → Push<br>
+                    → Review → Merge → Deploy → Verify</p>
+                <ul>
+                    <li>A saved file is not a commit; a commit is not a deployment</li>
+                    <li>Small changes are easier to understand and review</li>
+                    <li>Follow our rules and ask for help when unsure</li>
+                </ul>
+                <p class="cue">Your first task: a small change in the approved practice repo.</p>
+                <aside class="notes">
+                    50–52 minutes. Ask the audience to name the step that shares a commit (push)
+                    and the step that updates the running app (deploy).
+                    Point to the actual company onboarding guide and support contact.
+                    A first exercise should be a harmless change in the approved practice repository,
+                    never a production deployment.
+                </aside>
+            </section>
+
+            <section>
+                <h2>Questions &amp; next steps</h2>
+                <p>Which step would you like to see again?</p>
+                <ul class="small">
+                    <li><a href="https://code.visualstudio.com/docs/sourcecontrol/overview">VS Code: Source Control overview</a></li>
+                    <li><a href="https://docs.github.com/en/get-started/start-your-journey/hello-world">GitHub: Hello World</a></li>
+                    <li><a href="https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources">Azure: organizing resources</a></li>
+                </ul>
+                <p class="small"><a href="index.html">Back to all presentations</a></p>
+                <aside class="notes">
+                    52–60 minutes. Reserve this time for beginner questions rather than more slides.
+                    Share the company access request route, approved practice repository, internal
+                    rules, and support contact. If a question needs advanced Git or production
+                    troubleshooting, arrange follow-up rather than expanding this introduction.
+                </aside>
+            </section>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.2.1/plugin/notes/notes.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            controls: true,
+            progress: true,
+            center: true,
+            transition: 'slide',
+            slideNumber: 'c/t',
+            plugins: [ RevealNotes ]
+        });
+    </script>
+</body>
+</html>
