@@ -49,6 +49,22 @@ http-server -p 8000
 - **Speaker Notes**: Press `S`
 - **Fullscreen**: Press `F`
 
+## Working with GitHub in Visual Studio Code
+
+Open `github-vscode.html` directly or select **Working with GitHub in Visual Studio Code** on the landing page. The 12-slide beginner presentation covers Git/GitHub concepts, everyday VS Code use, company practices, Azure delivery, and one complete practical example.
+
+The one-hour session reserves **20 minutes for the introduction, 30 minutes for a live demo, and 10 minutes for recap and questions**. Each slide includes timed speaker notes and the demo slide includes a walkthrough. Press `S` for presenter view; use a local web server and allow the speaker-view popup.
+
+### Presenter preparation
+
+- Replace the bracketed prompts on the company and Azure slides with confirmed internal details: organization and access contact, approved sign-in, branch rules, reviewers, required checks, merge permissions, release approvals, support owner, and demo resources. These prompts are not assertions about company policy.
+- Confirm the Azure directory/tenant, subscription, resource group, app service/resource type, test URL, pipeline, trigger, and deployment environment. The deck describes a generic delivery path; adapt it to your actual GitHub Actions, Azure DevOps, or other approved pipeline.
+- Prepare Git and VS Code, company-approved authentication, repository access, and access to the non-production Azure resources. A GitHub Pull Requests extension is optional; the browser works for PRs.
+- Rehearse a welcome-heading change in an **existing approved demo app** with working checks and deployment. This presentation repository's GitHub Pages hosting is not the Azure demo app.
+- Have an authorized reviewer and any release approver available. Do not bypass protections or deploy to production for the demonstration.
+- Prepare a completed demo PR/run and sanitized screenshots as a clearly labeled fallback. Hide credentials and customer data, and ensure no secrets appear in code, logs, or the portal views you share.
+- Share the internal onboarding guide, practice repo, rules, and help contact at the end. Internet access is needed for the CDN-hosted reveal.js assets and online demonstration.
+
 ## 🎨 Features
 
 - Clean, responsive design
